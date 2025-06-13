@@ -23,5 +23,6 @@ MBTI: ${mbti}
   });
 
   const result = completion.choices[0].message.content;
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.status(200).json({ result });
 }
